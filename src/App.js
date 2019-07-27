@@ -3,12 +3,16 @@ import './assets/normalize.css';
 import './assets/general.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import AboutPage from './pages/about';
+import MainPage from './pages/main';
+import Menu from './components/Menu'
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Route path="/" exact component={AboutPage} />
+        <Menu />
+        <Route path="/" exact component={MainPage} />
+        <Route path="/about" component={AboutPage} />
       </Router>
     </div>
   );

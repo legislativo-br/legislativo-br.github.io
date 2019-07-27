@@ -7,3 +7,29 @@ body {
 img {
     max-width: 100%;
 }
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    padding: .75em;
+    justify-content: center;
+    border-width: 1px;
+    border-radius: 3px;
+    border-style: solid;
+    color: #363636;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.button.is-primary {
+    border-color: #363636;
+}
+
+.button.is-primary:hover {
+    color: white;
+    background-color: #363636;
+}
