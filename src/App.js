@@ -1,6 +1,8 @@
-import React from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-import AboutPage from './pages/about'
+import React from 'react';
+import './assets/normalize.css';
+import './assets/general.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import AboutPage from './pages/about';
 
 function App() {
   return (
