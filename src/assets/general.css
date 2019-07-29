@@ -1,3 +1,16 @@
+/*
+    Color palette from: https://colorhunt.co/palette/154144
+    primary: #464159
+    secondary: #6c7b95
+    tertiary: #8bbabb
+    base: #c7f0db
+    font-color: #393e46
+*/
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Raleway', 'sans-serif';
     color: #393e46;
@@ -32,4 +45,8 @@ a {
 .button.is-primary:hover {
     color: white;
     background-color: #363636;
+}
+
+.text-center {
+    text-align: center;
 }

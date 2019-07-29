@@ -3,7 +3,7 @@ import './assets/normalize.css';
 import './assets/general.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import AboutPage from './pages/about';
-import MainPage from './pages/main';
+import SearchPage from './pages/search';
 import Menu from './components/Menu'
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Router>
         <Menu />
-        <Route path="/" exact component={MainPage} />
+        <Route path="/" exact component={SearchPage} />
         <Route path="/about" component={AboutPage} />
       </Router>
     </div>
