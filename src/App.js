@@ -1,9 +1,15 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+// styles
 import './assets/normalize.css';
 import './assets/general.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+// pages
+import IndexPage from './pages/main';
 import AboutPage from './pages/about';
-import SearchPage from './pages/search';
+
+// components
 import Menu from './components/Menu'
 
 function App() {
@@ -11,7 +17,7 @@ function App() {
     <div className="App">
       <Router>
         <Menu />
-        <Route path="/" exact component={SearchPage} />
+        <Route path="/" exact component={IndexPage} />
         <Route path="/about" component={AboutPage} />
       </Router>
     </div>

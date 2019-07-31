@@ -14,11 +14,7 @@ const Container = styled.p`
 
 const Menu = props => {
   if (onHome(props.location || {})) {
-    return (
-      <Container>
-        <LinkButton label="Sobre" route="/about" />
-      </Container>
-    )
+    return null
   }
 
   return (

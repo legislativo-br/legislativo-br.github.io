@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Contributors from '../components/Contributors';
+import { Text, PageContainer } from '../styles';
 
-const Container = styled.main`
+const Container = styled(PageContainer)`
   position: relative;
   display: flex;
   justify-content: center;
@@ -23,11 +24,6 @@ const Container = styled.main`
   @media (max-width: 600px) {
     padding: 1rem;
   }
-`;
-
-const Text = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
 `;
 
 export default () => {
