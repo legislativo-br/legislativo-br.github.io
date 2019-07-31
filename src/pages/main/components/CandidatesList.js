@@ -5,7 +5,7 @@ export default class CandidatesList extends Component {
   render() {
     return (
       <Section>
-        <Content>
+        <Content center>
           <Container>
             <h2> Conheça os deputados eleitos nominalmente </h2>
             <p> Lista dos deputados aqui! </p>

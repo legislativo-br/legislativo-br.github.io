@@ -13,12 +13,22 @@
 
 body {
     font-family: 'Raleway', 'sans-serif';
-    color: #393e46;
     background-color: #eeeeee;
+    margin: 0;
+    padding: 0;
+    color: #4a4a4a;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
 }
 
 img {
     max-width: 100%;
+    width: 100%;
+}
+
+figure {
+    margin: 0;
 }
 
 a {

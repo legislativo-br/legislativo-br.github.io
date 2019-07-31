@@ -9,7 +9,7 @@ export default class GeneralVision extends Component {
   render() {
     return (
       <GeneralVisionContainer>
-        <Content>
+        <Content center>
           <Container>
             <h2> Visão Geral </h2>
             <p> Chart em breve! </p>
