@@ -11,6 +11,7 @@ const contributors = [
 
 const Footer = styled.footer`
   padding: 2rem;
+  text-align: center;
   
   .container {
     display: flex;

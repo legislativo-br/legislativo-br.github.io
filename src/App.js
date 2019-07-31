@@ -11,6 +11,7 @@ import AboutPage from './pages/about';
 
 // components
 import Menu from './components/Menu'
+import Contributors from './components/Contributors';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Menu />
         <Route path="/" exact component={IndexPage} />
         <Route path="/about" component={AboutPage} />
+        <Contributors />
       </Router>
     </div>
   );
