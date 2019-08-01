@@ -78,3 +78,11 @@ export const PrimaryButton = styled(Button)`
     background-color: #34314D;
   }
 `;
+
+export const ChipsContainer = styled.div`
+  display: flex;
+
+  div:not(:first-child) {
+    margin: 0 8px;
+  }
+`;
