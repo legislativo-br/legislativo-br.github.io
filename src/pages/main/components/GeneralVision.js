@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import c3 from 'c3';
 
 import generalSummaryData from '../../../data/general-summary.json';
 import { Section, Container, Content, PrimaryButton } from '../../../styles';
+import BarChart from '../../../components/BarChart';
 
 const GeneralVisionContainer = styled(Section)`
 `;
@@ -13,36 +13,33 @@ export default class GeneralVision extends Component {
     super(props)
   
     this.state = {
-      chart: null
+      series: this.getSeries()
     }
   }
-  
-  componentDidMount() {
+
+  getSeries () {
     const data = generalSummaryData[0]
     const { not_pulling_qty, chars } = data
-    const chart = c3.generate({
-        bindto: '#generalChart',
-        data: {
-          type : 'pie',
-          columns: [
-            ['Eleitos Nominalmente', not_pulling_qty],
-            ['Eleitos por puxadinho', (chars - not_pulling_qty)]
-          ]
-        }
-    })
 
-    this.setState({
-      chart
-    })
+    return [{
+      name: 'Eleitos Nominalmente',
+      data: [ not_pulling_qty ]
+    }, {
+      name: 'Eleitos por puxadinho',
+      data: [ (chars - not_pulling_qty) ]
+    }]
   }
   
   render() {
+    const { series } = this.state
     return (
       <GeneralVisionContainer>
         <Content center>
           <Container>
             <h2> Visão Geral </h2>
-            <div id="generalChart"></div>
+            <p> A seguir, um gráfico que mostra o quantidade de cadeiras ocupadas por deputados eleitos nominalmente ou por <a href="http://www.tse.jus.br/eleitor/glossario/termos/quociente-partidario" title="Acesse a explicação do TSE a respeito do termo Quociente Partidário">Quociente Partidário</a> </p>
+            <BarChart series={series} />
+            <br />
             <PrimaryButton> Veja os dados por Estado </PrimaryButton>
           </Container>
         </Content>

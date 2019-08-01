@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 // styles
 import './assets/normalize.css';
 import './assets/general.css';
-import '../node_modules/c3/c3.min.css';
 
 // pages
 import IndexPage from './pages/main';
