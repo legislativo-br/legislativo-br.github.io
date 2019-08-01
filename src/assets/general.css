@@ -35,13 +35,22 @@ a {
     text-decoration: none;
 }
 
+a:not(.button) {
+    background-color: #34314D;
+    color: white;
+}
+
+a:not(.button):hover {
+    text-decoration: underline;
+}
+
 .button {
     padding: .75em;
     justify-content: center;
     border-width: 1px;
     border-radius: 3px;
     border-style: solid;
-    color: #363636;
+    color: #34314D;
     text-align: center;
     white-space: nowrap;
     cursor: pointer;
@@ -49,12 +58,12 @@ a {
 }
 
 .button.is-primary {
-    border-color: #363636;
+    border-color: #34314D;
 }
 
 .button.is-primary:hover {
     color: white;
-    background-color: #363636;
+    background-color: #34314D;
 }
 
 .text-center {
