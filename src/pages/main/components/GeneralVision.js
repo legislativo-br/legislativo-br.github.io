@@ -6,6 +6,7 @@ import { Section, Container, Content, PrimaryButton } from '../../../styles';
 import BarChart from '../../../components/BarChart';
 
 const GeneralVisionContainer = styled(Section)`
+  background-color: white;
 `;
 
 export default class GeneralVision extends Component {
