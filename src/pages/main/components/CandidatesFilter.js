@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Select from '../../../components/Select';
+import statesSummary from '../../../data/states-summary.json';
 
-const Container = styled.div``;
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+
+  select:first-child {
+    margin-right: 4px;
+  }
+`;
 
 export default class CandidatesFilter extends Component {
   constructor(props) {
@@ -18,13 +26,29 @@ export default class CandidatesFilter extends Component {
           label: 'Ordenando por Votos',
           value: 'votes'
         }
-      ]
+      ],
+      stateOptions: this.getStatesFromSummary()
     }
+  }
+
+  getStatesFromSummary () {
+    return [
+      {
+        label: 'Visualizando todos os Estados',
+        value: ''
+      },
+      ...statesSummary.map(state => {
+        return {
+          label: `Filtre por ${state.name}`,
+          value: state.sigla
+        }
+      })
+    ]
   }
   
   render() {
-    const { orderOptions } = this.state
-    const { order } = this.props
+    const { orderOptions, stateOptions } = this.state
+    const { order, state } = this.props
 
     return (
       <Container>
@@ -32,6 +56,12 @@ export default class CandidatesFilter extends Component {
           value={order}
           options={orderOptions}
           onChange={this.props.onChangeOrder}
+        />
+
+        <Select
+          value={state}
+          options={stateOptions}
+          onChange={this.props.onChangeState}
         />
       </Container>
     )
