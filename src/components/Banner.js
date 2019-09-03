@@ -5,20 +5,19 @@ import MobileLogo from '../assets/images/mobile-banner.jpg';
 
 const BannerContainer = styled.div`
   width: 100%;
+  min-height: 100vh;
   display: block;
   background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(${DesktopLogo});
+
+  @media screen and (max-width: 768px) {
+    background-image: url(${MobileLogo});
+  }
 `;
 
-const isDesktop = width => width > 768;
+const Banner = () => (<BannerContainer />)
 
-export default function Banner () {
-  const viewportWidth = window.innerWidth;
-  return (
-    <BannerContainer>
-      <img
-        src={isDesktop(viewportWidth) ? DesktopLogo : MobileLogo}
-        alt=""
-      />
-    </BannerContainer>
-  )
-}
+export default Banner;
