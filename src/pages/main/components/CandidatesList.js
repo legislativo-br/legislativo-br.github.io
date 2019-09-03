@@ -11,10 +11,19 @@ import CandidatesFilter from './CandidatesFilter';
 import { Section, Content, Container } from '../../../styles';
 
 const CandidatesListContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  margin: 1rem auto;
+  max-width: 920px;
+
+  @media screen and (max-width: 552px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (min-width: 553px) and (max-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 export default class CandidatesList extends Component {

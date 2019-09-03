@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import GeneralVision from './components/GeneralVision';
 import CandidatesList from './components/CandidatesList'
-import { PageContainer } from '../../styles';
+import { PageContainer, Container } from '../../styles';
 import Banner from '../../components/Banner';
 
 export default class IndexPage extends React.Component {
@@ -12,10 +12,12 @@ export default class IndexPage extends React.Component {
         <Banner />
 
         <Header />
-
+        
         <GeneralVision />
-
-        <CandidatesList />
+        
+        <Container>
+          <CandidatesList />
+        </Container>
       </PageContainer>
     )
   }
