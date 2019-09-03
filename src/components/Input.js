@@ -37,7 +37,10 @@ const InputComponent = props => {
     <InputContainer>
       <label htmlFor="internal"> {props.label} </label>
       <input
+        {...props}
         id="internal"
+        value={props.value}
+        onChange={props.onChange}
         placeholder={props.placeholder}
       />
       <span className="internal-help"> {props.helper} </span>
@@ -46,7 +49,9 @@ const InputComponent = props => {
 };
 
 InputComponent.propTypes = {
-  label: PropTypes.string.isRequired
+  label: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired
 };
 
 export default InputComponent;
