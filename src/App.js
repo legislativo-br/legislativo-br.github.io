@@ -8,6 +8,7 @@ import './assets/general.css';
 // pages
 import IndexPage from './pages/main';
 import AboutPage from './pages/about';
+import StatesPage from './pages/states';
 
 // components
 import Menu from './components/Menu'
@@ -20,6 +21,7 @@ function App() {
         <Menu />
         <Route path="/" exact component={IndexPage} />
         <Route path="/about" component={AboutPage} />
+        <Route path="/states" component={StatesPage} />
         <Contributors />
       </Router>
     </div>

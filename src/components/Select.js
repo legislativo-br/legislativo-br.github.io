@@ -4,7 +4,7 @@ import styled from 'styled-components';
 // inspired by Bulma Select
 const Select = styled.select`
   position: relative;
-  padding: 0.3em 0 0.3em 0.3em;
+  padding: 0.3rem;
   background-color: #fff;
   border: 1px solid #34314D;
   border-radius: 4px;

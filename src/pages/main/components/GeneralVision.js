@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import generalSummaryData from '../../../data/general-summary.json';
-import { Section, Container, Content, PrimaryButton } from '../../../styles';
+import { Section, Container, Content } from '../../../styles';
 import BarChart from '../../../components/BarChart';
+import LinkButton from '../../../components/Button';
 
 const GeneralVisionContainer = styled(Section)`
   background-color: white;
@@ -41,7 +42,10 @@ export default class GeneralVision extends Component {
             <p> A seguir, um gráfico que mostra o quantidade de cadeiras ocupadas por deputados eleitos nominalmente ou por <a href="http://www.tse.jus.br/eleitor/glossario/termos/quociente-partidario" title="Acesse a explicação do TSE a respeito do termo Quociente Partidário">Quociente Partidário</a> </p>
             <BarChart series={series} />
             <br />
-            <PrimaryButton> Veja os dados por Estado </PrimaryButton>
+            <LinkButton
+              label="Veja os dados por Estado"
+              route="/states"
+            />
           </Container>
         </Content>
       </GeneralVisionContainer>

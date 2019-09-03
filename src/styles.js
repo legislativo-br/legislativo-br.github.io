@@ -95,3 +95,32 @@ export const ChipsContainer = styled.div`
     margin: 0 8px;
   }
 `;
+
+// inspired by Quasar Framework Card style
+export const Card = styled.div`
+  position: relative;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  background-color: white;
+  text-align: left;
+  overflow: hidden;
+
+  /* for mobile screens */
+  @media screen and (max-width: 527px) {
+    width: 100%;
+  }
+`;
+
+export const CardTitle = styled.div`
+  text-align: center;
+  margin: 0;
+  padding: 1rem 1.2rem;
+  background-color: #F6B642;
+  color: white;
+  font-size: 1.5rem;
+`;
+
+export const CardContent = styled.section`
+  padding: 1rem;
+`;
