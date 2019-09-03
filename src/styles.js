@@ -118,7 +118,7 @@ export const CardTitle = styled.div`
   padding: 1rem 1.2rem;
   background-color: #F6B642;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 `;
 
 export const CardContent = styled.section`
