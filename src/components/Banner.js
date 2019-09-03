@@ -6,6 +6,7 @@ import MobileLogo from '../assets/images/mobile-banner.jpg';
 const BannerContainer = styled.div`
   width: 100%;
   display: block;
+  background-color: white;
 `;
 
 const isDesktop = width => width > 768;

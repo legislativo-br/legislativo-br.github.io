@@ -41,6 +41,14 @@ export const Content = styled.div`
     font-size: 2rem;
   }
 
+  h1, h2, h3 {
+    margin-bottom: 1rem;
+  }
+
+  p:not(:first-of-type) {
+    margin-top: 1rem;
+  }
+
   @media screen and (max-width: 768px) {
     font-size: 1.15rem;
 
@@ -81,6 +89,7 @@ export const PrimaryButton = styled(Button)`
 
 export const ChipsContainer = styled.div`
   display: flex;
+  margin-top: 1rem;
 
   div:not(:first-child) {
     margin: 0 8px;
