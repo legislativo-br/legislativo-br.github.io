@@ -1,11 +1,11 @@
 [
-    {
-        "year": 2018,
-        "uuid": "a7fd2b5e-bd3c-4b2d-887f-a201b1c73c6d",
-        "is_federal": true,
-        "not_pulling_qty": 31,
-        "legend_votes": 15354797,
-        "nominal_votes": 110692829,
-        "chars": 513
-    }
+  {
+    "year": 2018,
+    "uuid": "d0ed80ab-1f5b-4490-87f5-4a35098daadc",
+    "is_federal": true,
+    "not_pulling_qty": 26,
+    "legend_votes": 6788417,
+    "nominal_votes": 91614627,
+    "chars": 513
+  }
 ]
