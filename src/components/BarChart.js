@@ -16,9 +16,12 @@ export default class BarChart extends React.Component {
           }
         },
         dataLabels: {
-          enabled: false,
+          enabled: true,
           formatter: (val) => {
             return `${val} cadeiras`
+          },
+          style: {
+            fontSize: '16px'
           }
         },
         xaxis: {
