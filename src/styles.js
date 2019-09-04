@@ -3,10 +3,10 @@ import styled from 'styled-components';
 // Containers
 export const PageContainer = styled.main`
   position: relative;
-  padding: ${props => props.paddingless ? null : '5rem 2rem 2rem 2rem'};
+  padding: ${props => props.paddingless ? null : '3rem 0'};
 
   @media (max-width: 600px) {
-    padding: ${props => props.paddingless ? null : '1rem'};
+    padding: ${props => props.paddingless ? null : '1rem 0'};
   }
 `;
 

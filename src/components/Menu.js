@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import Logo from '../assets/images/logo.png';
 
-const Container = styled.nav`
+const MenuContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -80,7 +80,7 @@ const LinksItem = styled.div`
 
 const Menu = props => {
   return (
-    <Container>
+    <MenuContainer>
       <Link to="/">
         <LogoContainer>
           <img src={Logo} alt="" />
@@ -101,7 +101,7 @@ const Menu = props => {
           <i className="fab fa-github-square"></i>
         </a>
       </LinksItem>
-    </Container>
+    </MenuContainer>
   )
 };
 

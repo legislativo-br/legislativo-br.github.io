@@ -4,7 +4,7 @@ import StatesList from './components/StatesList';
 
 const StatesPage = () => {
   return (
-    <PageContainer paddingless>
+    <PageContainer>
       <Container>
         <Section>
           <Content>
