@@ -37,16 +37,45 @@ a {
     text-decoration: none;
 }
 
-a:not(.button) {
+.link:not(.button) {
     background-color: #34314D;
     color: white;
 }
 
-a:not(.button):hover {
+.link {
+    background-color: #34314D;
+    color: white;
+}
+
+.link.is-inverted {
+    background-color: #F6B642;
+    color: #34314D;
+}
+
+.link:not(.button):hover {
     text-decoration: underline;
 }
 
+.mark-secondary {
+    color: #34314D;
+    background-color: #F6B642;
+}
+
+.mark-white {
+    color: #34314D;
+    background-color: white;
+}
+
+.text-primary {
+    color: #34314D;
+}
+
+.text-secondary {
+    color: #F6B642;
+}
+
 .button {
+    display: inline-block;
     padding: .75em;
     justify-content: center;
     border-width: 1px;
@@ -66,6 +95,16 @@ a:not(.button):hover {
 .button.is-primary:hover {
     color: white;
     background-color: #34314D;
+}
+
+.button.is-secondary {
+    border-color: #F6B642;
+    color: #F6B642;
+}
+
+.button.is-secondary:hover {
+    color: #34314D;
+    background-color: #F6B642;
 }
 
 .text-center {
