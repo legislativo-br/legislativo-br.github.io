@@ -12,7 +12,7 @@ const AboutPage = () => {
 
           <div>
             <p>
-              O projeto &lsquo;Como meu deputado foi eleito?&rsquo; tem como
+              O projeto &lsquo;Como foi eleito meu deputado?&rsquo; tem como
               objetivo trazer para o eleitor a possibilidade de pesquisar de
               maneira rápida se o candidato em que votou para Deputado Federal
               foi eleito nominalmente, ou, devido ao sistema eleitoral, pelo
