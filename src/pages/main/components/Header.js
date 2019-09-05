@@ -8,13 +8,12 @@ const Header = props => {
       <Content center>
         <Container>
           <p>
-            {' '}
-            O projeto "Como meu deputado foi eleito?", tem como objetivo trazer
-            para o contexto dos eleitores, dados das Eleições Federais de 2018,
-            a fim de informar a respeito da quantidade de deputados que foram
-            eleitos diretamente pelos seus votos (eleitos nominalmente), e
-            comparar o quantitativo em relação aos que foram "puxados" (eleitos
-            por{' '}
+            O projeto &lsquo;Como meu deputado foi eleito?&lsquo;, tem como
+            objetivo trazer para o contexto dos eleitores, dados das Eleições
+            Federais de 2018, a fim de informar a respeito da quantidade de
+            deputados que foram eleitos diretamente pelos seus votos (eleitos
+            nominalmente), e comparar o quantitativo em relação aos que foram
+            &lsquo;puxados&lsquo; (eleitos por
             <a
               className="link"
               href="http://www.tse.jus.br/eleitor/glossario/termos/quociente-partidario"
@@ -22,14 +21,13 @@ const Header = props => {
             >
               Quociente Partidário
             </a>
-            ).{' '}
+            ).
           </p>
 
           <p>
-            {' '}
             Nesta página você poderá analisar os dados nacionalmente, como na
             próxima seção, bem como visualizar os candidatos que foram eleitos
-            nominalmente (conseguiram uma quantidade de votos acima do{' '}
+            nominalmente (conseguiram uma quantidade de votos acima do
             <a
               className="link"
               href="http://www.tse.jus.br/eleitor-e-eleicoes/eleitor/glossario/termos/quociente-eleitoral"
@@ -37,7 +35,7 @@ const Header = props => {
             >
               Quociente Eleitoral
             </a>
-            ){' '}
+            )
           </p>
 
           <br />
