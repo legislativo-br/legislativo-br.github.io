@@ -35,7 +35,7 @@ const CardTitle = styled.div`
 `;
 
 const StateCard = props => {
-  const { name, chars, notPulling } = props.state
+  const { name, chars, notPulling } = props.state;
 
   return (
     <Card>
@@ -44,25 +44,18 @@ const StateCard = props => {
           <h2> {name} </h2>
         </CardTitle>
 
-        <Chairs
-          chars={chars}
-          selected={notPulling}
-        />
+        <Chairs chars={chars} selected={notPulling} />
       </div>
 
       <div className="column">
-        <Pictogram
-          chars={chars}
-          inverted
-          selected={notPulling}
-        />
+        <Pictogram chars={chars} inverted selected={notPulling} />
       </div>
     </Card>
-  )
-}
+  );
+};
 
 StateCard.propTypes = {
-  state: PropTypes.object
-}
+  state: PropTypes.object.isRequired,
+};
 
 export default StateCard;

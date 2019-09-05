@@ -11,10 +11,10 @@
 export const formatNumber = num => {
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat
   if (typeof Intl !== 'undefined') {
-    const Formatter = new Intl.NumberFormat('pt-BR')
+    const Formatter = new Intl.NumberFormat('pt-BR');
 
-    return Formatter.format(num)
+    return Formatter.format(num);
   }
 
-  return num
-}
+  return num;
+};

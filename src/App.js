@@ -11,7 +11,7 @@ import AboutPage from './pages/about';
 import StatesPage from './pages/states';
 
 // components
-import Menu from './components/Menu'
+import Menu from './components/Menu';
 import Contributors from './components/Contributors';
 
 function App() {

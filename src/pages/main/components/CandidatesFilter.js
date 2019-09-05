@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Select from '../../../components/Select';
 import statesSummary from '../../../data/states-summary.json';
+import PropTypes from 'prop-types';
 
 const Container = styled.div`
   max-width: 800px;
@@ -26,43 +27,43 @@ const Container = styled.div`
   }
 `;
 
-export default class CandidatesFilter extends Component {
+class CandidatesFilter extends Component {
   constructor(props) {
-    super(props)
-  
+    super(props);
+
     this.state = {
       orderOptions: [
         {
           label: 'Ordenando por Nome',
-          value: 'urne_name'
+          value: 'urne_name',
         },
         {
           label: 'Ordenando por Votos',
-          value: 'votes'
-        }
+          value: 'votes',
+        },
       ],
-      stateOptions: this.getStatesFromSummary()
-    }
+      stateOptions: this.getStatesFromSummary(),
+    };
   }
 
-  getStatesFromSummary () {
+  getStatesFromSummary() {
     return [
       {
         label: 'Visualize todos os Estados',
-        value: ''
+        value: '',
       },
       ...statesSummary.map(state => {
         return {
           label: `Filtre por ${state.name}`,
-          value: state.sigla
-        }
-      })
-    ]
+          value: state.sigla,
+        };
+      }),
+    ];
   }
-  
+
   render() {
-    const { orderOptions, stateOptions } = this.state
-    const { order, state } = this.props
+    const { orderOptions, stateOptions } = this.state;
+    const { order, state } = this.props;
 
     return (
       <Container>
@@ -82,6 +83,15 @@ export default class CandidatesFilter extends Component {
           onChange={this.props.onChangeState}
         />
       </Container>
-    )
+    );
   }
 }
+
+CandidatesFilter.propTypes = {
+  order: PropTypes.string.isRequired,
+  state: PropTypes.string.isRequired,
+  onChangeOrder: PropTypes.func.isRequired,
+  onChangeState: PropTypes.func.isRequired,
+};
+
+export default CandidatesFilter;

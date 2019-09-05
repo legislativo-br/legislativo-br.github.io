@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Container = styled.div`
   font-size: 1.3rem;
@@ -11,14 +12,14 @@ const Container = styled.div`
   .icon {
     margin-right: 1rem;
   }
-  
+
   .selected {
-    color: #F6B642;
+    color: #f6b642;
   }
 `;
 
 const Chairs = props => {
-  const { chars, selected } = props
+  const { chars, selected } = props;
 
   return (
     <Container>
@@ -37,7 +38,12 @@ const Chairs = props => {
         <span>{selected} deputados</span>
       </p>
     </Container>
-  )
-}
+  );
+};
+
+Chairs.propTypes = {
+  chars: PropTypes.number.isRequired,
+  selected: PropTypes.number.isRequired,
+};
 
 export default Chairs;

@@ -1,34 +1,45 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 // inspired by Bulma Select
 const Select = styled.select`
   position: relative;
   padding: 0.3rem;
   background-color: #fff;
-  border: 1px solid #34314D;
+  border: 1px solid #34314d;
   border-radius: 4px;
   color: #4a4a4a;
   vertical-align: top;
   max-width: 100%;
 `;
 
-const Wrapper = styled.div`
-`;
-
 const Component = props => {
   return (
-    <Wrapper>
-      <label className="hide-element" htmlFor={props.id}>{props.label}</label>
+    <div>
+      <label className="hide-element" htmlFor={props.id}>
+        {props.label}
+      </label>
       <Select id={props.id} value={props.value} onChange={props.onChange}>
-        {
-          props.options.map((option, key) => {
-            return <option value={option.value} key={key}> {option.label} </option>
-          })
-        }
+        {props.options.map((option, key) => {
+          return (
+            <option value={option.value} key={key}>
+              {' '}
+              {option.label}{' '}
+            </option>
+          );
+        })}
       </Select>
-    </Wrapper>
-  )
+    </div>
+  );
+};
+
+Component.propTypes = {
+  label: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  options: PropTypes.array.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default Component;

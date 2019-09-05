@@ -12,8 +12,9 @@ const MenuContainer = styled.nav`
   z-index: 2;
   width: 100%;
   padding: 1rem 2rem;
-  background-color: #34314D;
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05);
+  background-color: #34314d;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
   @media screen and (max-width: 552px) {
     padding: 1rem;
@@ -46,7 +47,7 @@ const LinksItem = styled.div`
       right: 0;
       width: 100%;
       height: 2px;
-      background-color: #F6B642;
+      background-color: #f6b642;
       opacity: 0;
       transition: opacity 0.3s ease-out;
     }
@@ -69,7 +70,7 @@ const LinksItem = styled.div`
     padding-left: 1.25rem;
 
     &:hover {
-      color: #F6B642;
+      color: #f6b642;
     }
 
     @media screen and (max-width: 552px) {
@@ -78,7 +79,7 @@ const LinksItem = styled.div`
   }
 `;
 
-const Menu = props => {
+const Menu = () => {
   return (
     <MenuContainer>
       <Link to="/" title="Ir para a Página Principal">
@@ -86,17 +87,21 @@ const Menu = props => {
           <img src={Logo} alt="" />
         </LogoContainer>
       </Link>
-      
+
       <LinksItem>
         <Link
           title="Confira a página com os resultados por Estado"
           className="link-item"
-          to="/states"> Estados </Link>
+          to="/states"
+        >
+          {' '}
+          Estados{' '}
+        </Link>
 
-        <Link
-          title="Conheça o projeto"
-          className="link-item"
-          to="/about"> Sobre </Link>
+        <Link title="Conheça o projeto" className="link-item" to="/about">
+          {' '}
+          Sobre{' '}
+        </Link>
 
         <a
           target="blank"
@@ -108,7 +113,7 @@ const Menu = props => {
         </a>
       </LinksItem>
     </MenuContainer>
-  )
+  );
 };
 
-export default withRouter(Menu)
+export default withRouter(Menu);

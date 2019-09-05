@@ -18,6 +18,6 @@ const BannerContainer = styled.div`
   }
 `;
 
-const Banner = () => (<BannerContainer />)
+const Banner = () => <BannerContainer />;
 
 export default Banner;

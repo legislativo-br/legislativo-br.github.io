@@ -1,30 +1,21 @@
 import React from 'react';
-import styled from 'styled-components';
+import { Chip } from '../styles';
+import PropTypes from 'prop-types';
 
-const ChipContainer = styled.div`
-  display: inline-flex;
-  align-items: center;
-  padding: 7px 12px;
-  border-radius: 4px;
-  border: none;
-  background-color: white;
-  color: #34314D;
-  font-size: 0.8rem;
+const Component = props => {
+  const { label, icon } = props;
 
-  i {
-    font-size: 14px;
-    margin-right: 4px;
-  }
-`;
-
-const Chip = props => {
-  const { label, icon } = props
   return (
-    <ChipContainer>
+    <Chip>
       <i aria-hidden="true" className={icon}></i>
       <span>{label}</span>
-    </ChipContainer>
-  )
+    </Chip>
+  );
 };
 
-export default Chip;
+Component.propTypes = {
+  label: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+};
+
+export default Component;

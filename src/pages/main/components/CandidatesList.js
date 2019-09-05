@@ -28,69 +28,70 @@ const CandidatesListContainer = styled.div`
 
 export default class CandidatesList extends Component {
   constructor(props) {
-    super(props)
-  
+    super(props);
+
     this.state = {
       order: 'urne_name',
       sigla_party: null,
       state_sigla: null,
-      candidates: CandidatesData
-    }
+      candidates: CandidatesData,
+    };
 
-    this.handleChangeOrder = this.handleChangeOrder.bind(this)
-    this.handleChangeState = this.handleChangeState.bind(this)
+    this.handleChangeOrder = this.handleChangeOrder.bind(this);
+    this.handleChangeState = this.handleChangeState.bind(this);
   }
 
-  renderCandidatesList ({ orderColumn, state_sigla, sigla_party }) {
-    const { candidates } = this.state
-    const data = this.getCandidatesOrdered(candidates, orderColumn)
-    return this.getCandidatesFiltered(data, { state_sigla, sigla_party })
-      .map((candidate, key) => {
-        return <CandidateBox candidate={candidate} key={key} />
-      })
+  renderCandidatesList({ orderColumn, state_sigla, sigla_party }) {
+    const { candidates } = this.state;
+    const data = this.getCandidatesOrdered(candidates, orderColumn);
+    return this.getCandidatesFiltered(data, { state_sigla, sigla_party }).map(
+      (candidate, key) => {
+        return <CandidateBox candidate={candidate} key={key} />;
+      }
+    );
   }
 
-  getCandidatesOrdered (candidates, orderColumn) {
-    const order = orderColumn === 'urne_name' ? 'asc' : 'desc'
-    return orderBy(candidates, [orderColumn], [order])
+  getCandidatesOrdered(candidates, orderColumn) {
+    const order = orderColumn === 'urne_name' ? 'asc' : 'desc';
+    return orderBy(candidates, [orderColumn], [order]);
   }
 
-  getCandidatesFiltered (data, filterData) {
-    const filterObject = this.getFilterData(filterData)
+  getCandidatesFiltered(data, filterData) {
+    const filterObject = this.getFilterData(filterData);
     if (isEmpty(filterObject)) {
-      return data
+      return data;
     }
 
-    return filter(data, filterObject)
+    return filter(data, filterObject);
   }
 
-  getFilterData (filterData) {
+  getFilterData(filterData) {
     return Object.keys(filterData).reduce((acc, key) => {
       if (filterData[key]) {
-        acc[key] = filterData[key]
+        acc[key] = filterData[key];
       }
 
-      return acc
-    }, {})
+      return acc;
+    }, {});
   }
 
-  handleChangeOrder (e) {
-    const value = e.target.value
+  handleChangeOrder(e) {
+    const value = e.target.value;
     this.setState({
-      order: value
-    })
+      order: value,
+    });
   }
 
-  handleChangeState (e) {
-    const value = e.target.value
+  handleChangeState(e) {
+    const value = e.target.value;
     this.setState({
-      state_sigla: value
-    })
+      state_sigla: value,
+    });
   }
-  
+
   render() {
-    const { order, state_sigla, sigla_party } = this.state
-    const data = { orderColumn: order, state_sigla, sigla_party }
+    const { order, state_sigla, sigla_party } = this.state;
+    const data = { orderColumn: order, state_sigla, sigla_party };
     return (
       <Section>
         <Content center>
@@ -109,6 +110,6 @@ export default class CandidatesList extends Component {
           </Container>
         </Content>
       </Section>
-    )
+    );
   }
 }

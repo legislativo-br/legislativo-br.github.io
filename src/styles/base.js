@@ -3,7 +3,11 @@ import styled from 'styled-components';
 // Containers
 export const PageContainer = styled.main`
   position: relative;
-  padding: ${props => (props.paddingless ? null : '4rem 0')};
+  padding: ${props => (props.paddingless ? null : '5rem 0 2rem 0')};
+
+  @media screen and (max-width: 768px) {
+    padding: ${props => (props.paddingless ? null : '5rem 2rem 2rem')};
+  }
 `;
 
 export const Hero = styled.header`
@@ -17,7 +21,7 @@ export const Hero = styled.header`
 
 export const Container = styled.div`
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: ${props => props.max || '1200px'};
 `;
 
 export const Section = styled.section`

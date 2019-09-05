@@ -1,19 +1,20 @@
-import React from "react";
+import React from 'react';
 import { initial } from 'lodash-es';
+import PropTypes from 'prop-types';
 
-import Chip from "./Chip";
+import Chip from './Chip';
 import { Card, CardTitle, CardContent, ChipsContainer } from '../styles';
-import { formatNumber } from "../support/utils";
+import { formatNumber } from '../support/utils';
 
 const getCandidateName = name => {
-  const splits = name.split(' ')
+  const splits = name.split(' ');
 
   if (splits.length <= 3) {
-    return splits.join(' ')
+    return splits.join(' ');
   }
 
-  return initial(splits).join(' ')
-}
+  return initial(splits).join(' ');
+};
 
 const Component = props => {
   const {
@@ -21,7 +22,7 @@ const Component = props => {
     number,
     sigla_party,
     state_sigla,
-    votes
+    votes,
   } = props.candidate;
 
   return (
@@ -41,6 +42,10 @@ const Component = props => {
       </CardContent>
     </Card>
   );
+};
+
+Component.propTypes = {
+  candidate: PropTypes.object.isRequired,
 };
 
 export default Component;
