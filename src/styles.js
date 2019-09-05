@@ -3,11 +3,7 @@ import styled from 'styled-components';
 // Containers
 export const PageContainer = styled.main`
   position: relative;
-  padding: ${props => props.paddingless ? null : '3rem 0'};
-
-  @media (max-width: 600px) {
-    padding: ${props => props.paddingless ? null : '1rem 0'};
-  }
+  padding: ${props => props.paddingless ? null : '4rem 0'};
 `;
 
 export const Hero = styled.header`
