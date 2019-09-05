@@ -14,10 +14,16 @@ const Footer = styled.footer`
   color: white;
   padding: 2rem;
   text-align: center;
+  font-size: 1rem;
   
   .container {
     display: flex;
     justify-content: center;
+  }
+
+  .title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -54,7 +60,7 @@ const ContributorItem = (props) => {
 const Contributor = () => {
   return (
     <Footer>
-      <h2> Conheça quem trabalha no projeto </h2>
+      <h2 className="title"> Conheça quem trabalha no projeto </h2>
       <div className="container">
         {
           contributors.map((contributor, key) => {
