@@ -13,15 +13,18 @@ import StatesPage from './pages/states';
 // components
 import Menu from './components/Menu';
 import Contributors from './components/Contributors';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Menu />
-        <Route path="/" exact component={IndexPage} />
-        <Route path="/about" component={AboutPage} />
-        <Route path="/states" component={StatesPage} />
+        <ScrollToTop>
+          <Route path="/" exact component={IndexPage} />
+          <Route path="/about" component={AboutPage} />
+          <Route path="/states" component={StatesPage} />
+        </ScrollToTop>
         <Contributors />
       </Router>
     </div>
