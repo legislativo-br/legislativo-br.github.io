@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import Logo from '../assets/images/logo.png';
+import PropTypes from 'prop-types';
 
 const MenuContainer = styled.nav`
   display: flex;
@@ -52,7 +53,8 @@ const LinksItem = styled.div`
       transition: opacity 0.3s ease-out;
     }
 
-    &:hover {
+    &:hover,
+    &.active {
       &::before {
         opacity: 1;
       }
@@ -79,7 +81,29 @@ const LinksItem = styled.div`
   }
 `;
 
-const Menu = () => {
+const WrapperLink = props => {
+  const isCurrentPath = props.path === props.to;
+  return (
+    <Link
+      title={props.title}
+      className={`link-item ${isCurrentPath ? 'active' : null}`}
+      to={props.to}
+    >
+      {props.label}
+    </Link>
+  );
+};
+
+WrapperLink.propTypes = {
+  path: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+};
+
+const Menu = props => {
+  const pathname = props.location.pathname || ''; // eslint-disable-line
+
   return (
     <MenuContainer>
       <Link to="/" title="Ir para a Página Principal">
@@ -89,19 +113,19 @@ const Menu = () => {
       </Link>
 
       <LinksItem>
-        <Link
+        <WrapperLink
           title="Confira a página com os resultados por Estado"
-          className="link-item"
           to="/states"
-        >
-          {' '}
-          Estados{' '}
-        </Link>
+          label="Estados"
+          path={pathname}
+        />
 
-        <Link title="Conheça o projeto" className="link-item" to="/about">
-          {' '}
-          Sobre{' '}
-        </Link>
+        <WrapperLink
+          title="Conheça o projeto"
+          to="/about"
+          label="Sobre"
+          path={pathname}
+        />
 
         <a
           target="blank"
