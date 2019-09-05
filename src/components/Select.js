@@ -13,15 +13,21 @@ const Select = styled.select`
   max-width: 100%;
 `;
 
+const Wrapper = styled.div`
+`;
+
 const Component = props => {
   return (
-    <Select value={props.value} onChange={props.onChange}>
-      {
-        props.options.map((option, key) => {
-          return <option value={option.value} key={key}> {option.label} </option>
-        })
-      }
-    </Select>
+    <Wrapper>
+      <label className="hide-element" htmlFor={props.id}>{props.label}</label>
+      <Select id={props.id} value={props.value} onChange={props.onChange}>
+        {
+          props.options.map((option, key) => {
+            return <option value={option.value} key={key}> {option.label} </option>
+          })
+        }
+      </Select>
+    </Wrapper>
   )
 };
 

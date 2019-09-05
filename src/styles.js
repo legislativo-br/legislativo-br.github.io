@@ -85,6 +85,7 @@ export const PrimaryButton = styled(Button)`
 
 export const ChipsContainer = styled.div`
   display: flex;
+  justify-content: center;
   margin-top: 1rem;
 
   div:not(:first-child) {
@@ -97,8 +98,9 @@ export const Card = styled.div`
   position: relative;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12);
+  background-color: #34314D;
+  color: white;
   border-radius: 4px;
-  background-color: white;
   text-align: left;
   overflow: hidden;
 
@@ -112,11 +114,11 @@ export const CardTitle = styled.div`
   text-align: center;
   margin: 0;
   padding: 1rem 1.2rem;
-  background-color: #F6B642;
-  color: white;
+  color: #F6B642;
   font-size: 1.4rem;
 `;
 
 export const CardContent = styled.section`
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
+  text-align: center;
 `;

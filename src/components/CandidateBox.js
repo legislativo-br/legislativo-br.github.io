@@ -1,19 +1,22 @@
 import React from "react";
-import styled from "styled-components";
+import { initial } from 'lodash-es';
 
 import Chip from "./Chip";
-import { Card, CardTitle, CardContent } from '../styles';
+import { Card, CardTitle, CardContent, ChipsContainer } from '../styles';
 import { formatNumber } from "../support/utils";
-import { ChipsContainer } from '../styles';
 
-const CandidateName = styled.p`
-  font-size: 0.9rem;
-  margin: 0;
-`;
+const getCandidateName = name => {
+  const splits = name.split(' ')
+
+  if (splits.length <= 3) {
+    return splits.join(' ')
+  }
+
+  return initial(splits).join(' ')
+}
 
 const Component = props => {
   const {
-    name,
     urne_name,
     number,
     sigla_party,
@@ -24,12 +27,10 @@ const Component = props => {
   return (
     <Card>
       <CardTitle>
-        <span>{urne_name}</span>
+        <span>{getCandidateName(urne_name)}</span>
       </CardTitle>
 
       <CardContent>
-        <CandidateName>{name}</CandidateName>
-
         <p>{formatNumber(votes)} votos</p>
 
         <ChipsContainer>

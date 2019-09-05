@@ -81,16 +81,22 @@ const LinksItem = styled.div`
 const Menu = props => {
   return (
     <MenuContainer>
-      <Link to="/">
+      <Link to="/" title="Ir para a Página Principal">
         <LogoContainer>
           <img src={Logo} alt="" />
         </LogoContainer>
       </Link>
       
       <LinksItem>
-        <Link className="link-item" to="/states"> Estados </Link>
+        <Link
+          title="Confira a página com os resultados por Estado"
+          className="link-item"
+          to="/states"> Estados </Link>
 
-        <Link className="link-item" to="/about"> Sobre </Link>
+        <Link
+          title="Conheça o projeto"
+          className="link-item"
+          to="/about"> Sobre </Link>
 
         <a
           target="blank"

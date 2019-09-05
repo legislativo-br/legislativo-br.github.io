@@ -7,8 +7,8 @@ const ChipContainer = styled.div`
   padding: 7px 12px;
   border-radius: 4px;
   border: none;
-  background-color: #34314D;
-  color: white;
+  background-color: white;
+  color: #34314D;
   font-size: 0.8rem;
 
   i {

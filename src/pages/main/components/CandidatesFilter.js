@@ -10,7 +10,7 @@ const Container = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 
-  select:first-child {
+  & :first-child {
     margin-right: 4px;
   }
 
@@ -19,7 +19,7 @@ const Container = styled.div`
       width: 100%;
     }
 
-    select:first-child {
+    & :first-child {
       margin-right: 0;
       margin-bottom: 0.5rem;
     }
@@ -67,12 +67,16 @@ export default class CandidatesFilter extends Component {
     return (
       <Container>
         <Select
+          label="Ordene por"
+          id="select_order"
           value={order}
           options={orderOptions}
           onChange={this.props.onChangeOrder}
         />
 
         <Select
+          label="Visualize todos os Estados"
+          id="select_state"
           value={state}
           options={stateOptions}
           onChange={this.props.onChangeState}
