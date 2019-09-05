@@ -4,11 +4,25 @@ import Select from '../../../components/Select';
 import statesSummary from '../../../data/states-summary.json';
 
 const Container = styled.div`
+  max-width: 800px;
+  margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 
   select:first-child {
     margin-right: 4px;
+  }
+
+  @media screen and (max-width: 552px) {
+    select {
+      width: 100%;
+    }
+
+    select:first-child {
+      margin-right: 0;
+      margin-bottom: 0.5rem;
+    }
   }
 `;
 
@@ -34,7 +48,7 @@ export default class CandidatesFilter extends Component {
   getStatesFromSummary () {
     return [
       {
-        label: 'Visualizando todos os Estados',
+        label: 'Visualize todos os Estados',
         value: ''
       },
       ...statesSummary.map(state => {
