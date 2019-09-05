@@ -7,6 +7,8 @@ import Banner from '../../components/Banner';
 
 export default class IndexPage extends React.Component {
   render () {
+    window.scrollTo(0, 0)
+
     return (
       <PageContainer paddingless>
         <Banner />

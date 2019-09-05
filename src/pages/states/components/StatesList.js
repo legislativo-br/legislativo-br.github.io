@@ -18,31 +18,19 @@ const parseData = data => {
   }, {})
 }
 
-const ListContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
-
-  @media screen and (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-`;
-
 const StatesList = () => {
-  const [ states ] = useState(parseData(data))
+  const states = parseData(data)
 
   window.scrollTo(0, 0)
 
   return (
-    <>
-      <ListContainer style={{ width: '100%' }}>
-        {
-          Object.values(states).map((state, index) => {
-            return <StateCard key={index} state={state} />
-          })
-        }
-      </ListContainer>
-    </>
+    <div style={{ width: '100%' }}>
+      {
+        Object.values(states).map((state, index) => {
+          return <StateCard key={index} state={state} />
+        })
+      }
+    </div>
   )
 }
 
