@@ -8,7 +8,7 @@ const Header = props => {
       <Content center>
         <Container>
           <p>
-            O projeto &lsquo;Como foi eleito meu deputado?&lsquo;, tem como
+            O projeto &lsquo;Como meu deputado foi eleito?&rsquo;, tem como
             objetivo trazer para o contexto dos eleitores, dados das Eleições
             Federais de 2018, a fim de informar a respeito da quantidade de
             deputados que foram eleitos diretamente pelos seus votos (eleitos
