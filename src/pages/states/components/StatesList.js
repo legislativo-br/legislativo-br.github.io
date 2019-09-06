@@ -1,6 +1,15 @@
 import React from 'react';
 import data from '../../../data/states-summary.json';
 import StateCard from './StateCard';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  width: 100%;
+
+  .state_card:not(:first-of-type) {
+    margin-top: 1rem;
+  }
+`;
 
 const parseData = data => {
   return data.reduce((acc, state) => {
@@ -22,11 +31,11 @@ const StatesList = () => {
   const states = parseData(data);
 
   return (
-    <div style={{ width: '100%' }}>
+    <Container>
       {Object.values(states).map((state, index) => {
         return <StateCard key={index} state={state} />;
       })}
-    </div>
+    </Container>
   );
 };
 

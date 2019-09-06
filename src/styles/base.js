@@ -6,7 +6,7 @@ export const PageContainer = styled.main`
   padding: ${props => (props.paddingless ? null : '5rem 0 2rem 0')};
 
   @media screen and (max-width: 768px) {
-    padding: ${props => (props.paddingless ? null : '5rem 2rem 2rem')};
+    padding: ${props => (props.paddingless ? null : '5rem 1rem 2rem 1rem')};
   }
 `;
 

@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(10, 1fr);
+  grid-gap: 0.5rem;
   font-size: 1.5rem;
   color: ${props => (props.inverted ? 'white' : 'var(--primary)')};
 

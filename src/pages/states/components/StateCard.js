@@ -7,7 +7,9 @@ import Chairs from './Chairs';
 const Card = styled.section`
   width: 100%;
   display: flex;
-  padding: 2rem 0;
+  padding: 1rem 1.2rem;
+  background-color: var(--primary-dark);
+  border-radius: 4px;
 
   .column {
     width: 50%;
@@ -39,7 +41,7 @@ const StateCard = props => {
   const { name, chars, notPulling } = props.state;
 
   return (
-    <Card>
+    <Card className="state_card">
       <div className="column">
         <CardTitle>
           <h2> {name} </h2>
