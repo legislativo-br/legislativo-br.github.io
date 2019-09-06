@@ -63,19 +63,3 @@ export const CardContent = styled.section`
   padding: 0 1rem 1rem 1rem;
   text-align: center;
 `;
-
-export const Chip = styled.div`
-  display: inline-flex;
-  align-items: center;
-  padding: 7px 12px;
-  border-radius: 4px;
-  border: none;
-  background-color: white;
-  color: var(--primary);
-  font-size: 0.8rem;
-
-  i {
-    font-size: 14px;
-    margin-right: 4px;
-  }
-`;
