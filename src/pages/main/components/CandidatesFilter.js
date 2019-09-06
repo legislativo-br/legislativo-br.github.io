@@ -89,7 +89,7 @@ class CandidatesFilter extends Component {
 
 CandidatesFilter.propTypes = {
   order: PropTypes.string.isRequired,
-  state: PropTypes.string.isRequired,
+  state: PropTypes.string,
   onChangeOrder: PropTypes.func.isRequired,
   onChangeState: PropTypes.func.isRequired,
 };

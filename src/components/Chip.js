@@ -14,7 +14,7 @@ const Component = props => {
 };
 
 Component.propTypes = {
-  label: PropTypes.string.isRequired,
+  label: PropTypes.any.isRequired,
   icon: PropTypes.string.isRequired,
 };
 

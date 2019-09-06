@@ -33,7 +33,7 @@ export default class CandidatesList extends Component {
     this.state = {
       order: 'urne_name',
       sigla_party: null,
-      state_sigla: null,
+      state_sigla: '',
       candidates: CandidatesData,
     };
 
@@ -100,6 +100,7 @@ export default class CandidatesList extends Component {
 
             <CandidatesFilter
               order={this.state.order}
+              state={this.state.state_sigla}
               onChangeOrder={this.handleChangeOrder}
               onChangeState={this.handleChangeState}
             />
