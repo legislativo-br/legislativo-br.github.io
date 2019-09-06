@@ -1,49 +1,53 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import Icon from '../../../components/Icon';
+import { formatNumber } from '../../../support/utils';
 
 const Container = styled.div`
   font-size: 1.3rem;
+  display: inline-flex;
+  flex-direction: column;
 
   p:not(:last-of-type) {
     margin-bottom: 0.5rem;
   }
 
-  .icon {
-    margin-right: 1rem;
+  p.selected {
+    color: var(--accent);
   }
 
-  .selected {
-    color: var(--accent);
+  .icon {
+    margin-right: 0.5rem;
   }
 `;
 
+const Data = (icon, label, isSelected) => {
+  return (
+    <p className={isSelected ? 'selected' : null}>
+      <Icon name={icon} />
+
+      <span> {label} </span>
+    </p>
+  );
+};
+
 const Chairs = props => {
-  const { chars, selected } = props;
+  const { chars, notPulling, quotient } = props.state;
 
   return (
     <Container>
-      <p>
-        <span className="icon">
-          <i className="fas fa-chair"></i>
-        </span>
+      {Data('fas fa-vote-yea', `QE: ${formatNumber(quotient)} votos`)}
 
-        <span>{chars} cadeiras</span>
-      </p>
+      {Data('fas fa-chair', `${chars} cadeiras`)}
 
-      <p className="selected">
-        <span className="icon">
-          <i className="fas fa-chair"></i>
-        </span>
-        <span>{selected} deputados</span>
-      </p>
+      {Data('fas fa-chair', `${notPulling} deputado(s)`, true)}
     </Container>
   );
 };
 
 Chairs.propTypes = {
-  chars: PropTypes.number.isRequired,
-  selected: PropTypes.number.isRequired,
+  state: PropTypes.object.isRequired,
 };
 
 export default Chairs;

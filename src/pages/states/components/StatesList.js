@@ -4,12 +4,13 @@ import StateCard from './StateCard';
 
 const parseData = data => {
   return data.reduce((acc, state) => {
-    const { sigla, name, chars, not_pulling_qty } = state;
+    const { sigla, name, chars, not_pulling_qty, election_quotient } = state;
 
     acc[sigla] = {
       sigla,
       name,
       chars,
+      quotient: election_quotient,
       notPulling: not_pulling_qty,
     };
 

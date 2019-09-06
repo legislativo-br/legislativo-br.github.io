@@ -32,6 +32,7 @@ const Card = styled.section`
 const CardTitle = styled.div`
   font-size: 1.5rem;
   color: white;
+  margin-bottom: 0.5rem;
 `;
 
 const StateCard = props => {
@@ -44,7 +45,7 @@ const StateCard = props => {
           <h2> {name} </h2>
         </CardTitle>
 
-        <Chairs chars={chars} selected={notPulling} />
+        <Chairs state={props.state} />
       </div>
 
       <div className="column">
