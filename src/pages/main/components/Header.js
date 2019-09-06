@@ -1,19 +1,70 @@
 import React from 'react';
+import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
-import { Hero, Content, Container, PrimaryButton } from '../../../styles';
+import { Content, PrimaryButton } from '../../../styles';
+import CamaraPhoto from '../../../assets/images/camara.jpg';
+
+const Hero = styled.header`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem;
+
+  .camara-photo {
+    display: inline-flex;
+    align-items: center;
+    flex: 1;
+    max-width: 600px;
+
+    img {
+      border-radius: var(--card-radious);
+      box-shadow: var(--box-shadow);
+    }
+  }
+
+  .camera-info {
+    display: inline-flex;
+    align-items: center;
+    flex: 1;
+    padding: 1rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    padding: 2rem 1rem;
+
+    .camera-info {
+      padding: 1rem 0;
+    }
+  }
+`;
 
 const Header = props => {
   return (
     <Hero>
-      <Content center>
-        <Container>
+      <div className="camara-photo">
+        <figure>
+          <img src={CamaraPhoto} alt="Foto da Câmara de Deputados do Brasil" />
+        </figure>
+      </div>
+      <div className="camera-info">
+        <Content>
           <p>
-            O projeto &lsquo;Como meu deputado foi eleito?&rsquo;, tem como
-            objetivo trazer para o contexto dos eleitores, dados das Eleições
-            Federais de 2018, a fim de informar a respeito da quantidade de
-            deputados que foram eleitos diretamente pelos seus votos (eleitos
-            nominalmente), e comparar o quantitativo em relação aos que foram
-            &lsquo;puxados&lsquo; (eleitos por
+            O projeto &lsquo;Como meu deputado foi eleito?&rsquo; tem como
+            objetivo trazer de maneira clara, dados das Eleições Federais de
+            2018, a fim de informar a respeito do quantitativo de Deputados
+            Federais que foram eleitos somente pelos seus votos, isto é, tendo
+            mais votos que o{' '}
+            <a
+              className="link"
+              href="http://www.tse.jus.br/eleitor/glossario/termos/quociente-partidario"
+              title="Acesse a explicação do TSE a respeito do termo Quociente Partidário"
+            >
+              Quociente Partidário
+            </a>{' '}
+            do Estado em que se elegeram, e comparar o quantitativo em relação
+            aos que foram &lsquo;puxados&lsquo;, isto é, eleitos com menos votos
+            que o{' '}
             <a
               className="link"
               href="http://www.tse.jus.br/eleitor/glossario/termos/quociente-partidario"
@@ -21,21 +72,7 @@ const Header = props => {
             >
               Quociente Partidário
             </a>
-            ).
-          </p>
-
-          <p>
-            Nesta página você poderá analisar os dados nacionalmente, como na
-            próxima seção, bem como visualizar os candidatos que foram eleitos
-            nominalmente (conseguiram uma quantidade de votos acima do
-            <a
-              className="link"
-              href="http://www.tse.jus.br/eleitor-e-eleicoes/eleitor/glossario/termos/quociente-eleitoral"
-              title="Acesse a explicação do TSE a respeito do termo Quociente Eleitoral"
-            >
-              Quociente Eleitoral
-            </a>
-            )
+            .
           </p>
 
           <br />
@@ -45,8 +82,8 @@ const Header = props => {
               Conheça mais do projeto
             </PrimaryButton>
           </div>
-        </Container>
-      </Content>
+        </Content>
+      </div>
     </Hero>
   );
 };

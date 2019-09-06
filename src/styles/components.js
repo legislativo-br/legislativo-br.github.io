@@ -37,11 +37,10 @@ export const ChipsContainer = styled.div`
 // inspired by Quasar Framework Card style
 export const Card = styled.div`
   position: relative;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12);
+  border-radius: var(--card-radious);
+  box-shadow: var(--box-shadow);
   background-color: var(--primary);
   color: white;
-  border-radius: 4px;
   text-align: left;
   overflow: hidden;
 

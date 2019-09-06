@@ -24,8 +24,8 @@ export default class GeneralVision extends Component {
 
     return (
       <GeneralVisionContainer>
-        <Content center>
-          <Container max="700px">
+        <Container max="700px">
+          <Content center>
             <h2> Visão Geral </h2>
             <p>
               A seguir, um gráfico que mostra a proporção de cadeiras ocupadas
@@ -56,8 +56,8 @@ export default class GeneralVision extends Component {
                 route="/states"
               />
             </div>
-          </Container>
-        </Content>
+          </Content>
+        </Container>
       </GeneralVisionContainer>
     );
   }

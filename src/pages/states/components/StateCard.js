@@ -9,7 +9,8 @@ const Card = styled.section`
   display: flex;
   padding: 1rem 1.2rem;
   background-color: var(--primary-dark);
-  border-radius: 4px;
+  border-radius: var(--card-radious);
+  box-shadow: var(--box-shadow);
 
   .column {
     width: 50%;
