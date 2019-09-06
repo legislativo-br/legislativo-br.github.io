@@ -9,7 +9,7 @@ import LinkButton from '../../../components/Button';
 const { not_pulling_qty, chars } = generalSummaryData[0] || {};
 
 const GeneralVisionContainer = styled(Section)`
-  background-color: #34314d;
+  background-color: var(--primary);
   color: white;
 
   .pictogram-container {

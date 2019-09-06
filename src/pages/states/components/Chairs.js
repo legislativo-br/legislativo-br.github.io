@@ -14,7 +14,7 @@ const Container = styled.div`
   }
 
   .selected {
-    color: #f6b642;
+    color: var(--accent);
   }
 `;
 

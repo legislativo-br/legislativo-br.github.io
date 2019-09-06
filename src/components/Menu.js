@@ -13,7 +13,7 @@ const MenuContainer = styled.nav`
   z-index: 2;
   width: 100%;
   padding: 1rem 2rem;
-  background-color: #34314d;
+  background-color: var(--primary);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
@@ -48,7 +48,7 @@ const LinksItem = styled.div`
       right: 0;
       width: 100%;
       height: 2px;
-      background-color: #f6b642;
+      background-color: var(--accent);
       opacity: 0;
       transition: opacity 0.3s ease-out;
     }
@@ -72,7 +72,7 @@ const LinksItem = styled.div`
     padding-left: 1.25rem;
 
     &:hover {
-      color: #f6b642;
+      color: var(--accent);
     }
 
     @media screen and (max-width: 552px) {

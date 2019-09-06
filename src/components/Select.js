@@ -6,10 +6,10 @@ import PropTypes from 'prop-types';
 const Select = styled.select`
   position: relative;
   padding: 0.3rem;
-  background-color: #fff;
-  border: 1px solid #34314d;
+  background-color: var(--white);
+  border: 1px solid var(--primary);
   border-radius: 4px;
-  color: #4a4a4a;
+  color: inherit;
   vertical-align: top;
   max-width: 100%;
 `;

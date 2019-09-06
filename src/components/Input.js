@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const InputContainer = styled.div`
   padding: 1rem;
   color: white;
-  background-color: #6c7b95;
+  background-color: var(--primary);
 
   label {
     display: block;
@@ -45,13 +45,15 @@ const InputComponent = props => {
       />
       <span className="internal-help"> {props.helper} </span>
     </InputContainer>
-  )
+  );
 };
 
 InputComponent.propTypes = {
   label: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired
+  placeholder: PropTypes.string,
+  helper: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default InputComponent;

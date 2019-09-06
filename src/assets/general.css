@@ -7,6 +7,14 @@
     font-color: #393e46
 */
 
+:root {
+    --primary: #34314D;
+    --accent: #F6B642;
+    --fontColor: #4a4a4a;
+    --white: white;
+    --bgBody: #eeeeee;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -19,10 +27,10 @@ html {
 
 body {
     font-family: 'Lato', 'sans-serif';
-    background-color: #eeeeee;
+    background-color: var(--bgBody);
     margin: 0;
     padding: 0;
-    color: #4a4a4a;
+    color: var(--fontColor);
     font-size: 62.5%;
     font-weight: 400;
     line-height: 1.5;
@@ -42,18 +50,18 @@ a {
 }
 
 .link:not(.button) {
-    background-color: #34314D;
-    color: white;
+    background-color: var(--primary);
+    color: var(--white);
 }
 
 .link {
-    background-color: #34314D;
-    color: white;
+    background-color: var(--primary);
+    color: var(--white);
 }
 
 .link.is-inverted {
-    background-color: #F6B642;
-    color: #34314D;
+    background-color: var(--accent);
+    color: var(--primary);
 }
 
 .link:not(.button):hover {
@@ -61,21 +69,21 @@ a {
 }
 
 .mark-secondary {
-    color: #34314D;
-    background-color: #F6B642;
+    color: var(--primary);
+    background-color: var(--accent);
 }
 
 .mark-white {
-    color: #34314D;
-    background-color: white;
+    color: var(--primary);
+    background-color: var(--white);
 }
 
 .text-primary {
-    color: #34314D;
+    color: var(--primary);
 }
 
 .text-secondary {
-    color: #F6B642;
+    color: var(--accent);
 }
 
 .button {
@@ -85,7 +93,7 @@ a {
     border-width: 1px;
     border-radius: 3px;
     border-style: solid;
-    color: #34314D;
+    color: var(--primary);
     text-align: center;
     white-space: nowrap;
     cursor: pointer;
@@ -93,22 +101,22 @@ a {
 }
 
 .button.is-primary {
-    border-color: #34314D;
+    border-color: var(--primary);
 }
 
 .button.is-primary:hover {
-    color: white;
-    background-color: #34314D;
+    color: var(--white);
+    background-color: var(--primary);
 }
 
 .button.is-secondary {
-    border-color: #F6B642;
-    color: #F6B642;
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 .button.is-secondary:hover {
-    color: #34314D;
-    background-color: #F6B642;
+    color: var(--primary);
+    background-color: var(--accent);
 }
 
 .text-center {

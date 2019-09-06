@@ -6,10 +6,10 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   font-size: 1.5rem;
-  color: ${props => (props.inverted ? 'white' : '#34314D')};
+  color: ${props => (props.inverted ? 'white' : 'var(--primary)')};
 
   .selected {
-    color: #f6b642;
+    color: var(--accent);
   }
 `;
 

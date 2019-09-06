@@ -12,7 +12,7 @@ const contributors = [
 ];
 
 const Footer = styled.footer`
-  background-color: #34314d;
+  background-color: var(--primary);
   color: white;
   padding: 2rem;
   text-align: center;

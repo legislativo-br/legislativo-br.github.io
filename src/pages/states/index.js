@@ -4,7 +4,7 @@ import { PageContainer, Container, Content } from '../../styles';
 import StatesList from './components/StatesList';
 
 const ContainerPage = styled(PageContainer)`
-  background-color: #34314d;
+  background-color: var(--primary);
   color: white;
 `;
 

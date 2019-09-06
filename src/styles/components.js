@@ -8,7 +8,7 @@ export const Button = styled.button`
   border-width: 1px;
   border-radius: 3px;
   border-style: solid;
-  color: #4a4a4a;
+  color: inherit;
   text-align: center;
   white-space: nowrap;
   cursor: pointer;
@@ -16,11 +16,11 @@ export const Button = styled.button`
 `;
 
 export const PrimaryButton = styled(Button)`
-  border-color: #34314d;
+  border-color: var(--primary);
 
   &:hover {
     color: white;
-    background-color: #34314d;
+    background-color: var(--primary);
   }
 `;
 
@@ -39,7 +39,7 @@ export const Card = styled.div`
   position: relative;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12);
-  background-color: #34314d;
+  background-color: var(--primary);
   color: white;
   border-radius: 4px;
   text-align: left;
@@ -55,7 +55,7 @@ export const CardTitle = styled.div`
   text-align: center;
   margin: 0;
   padding: 1rem 1.2rem;
-  color: #f6b642;
+  color: var(--accent);
   font-size: 1.4rem;
 `;
 
@@ -71,7 +71,7 @@ export const Chip = styled.div`
   border-radius: 4px;
   border: none;
   background-color: white;
-  color: #34314d;
+  color: var(--primary);
   font-size: 0.8rem;
 
   i {
