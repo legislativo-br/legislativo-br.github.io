@@ -26,7 +26,7 @@ export default class GeneralVision extends Component {
       <GeneralVisionContainer>
         <Container max="700px">
           <Content center>
-            <h2> Visão Geral </h2>
+            <h2> Proporção geral dos Deputados Federais </h2>
             <p>
               A seguir, um gráfico que mostra a proporção de cadeiras ocupadas
               por deputados eleitos nominalmente ou por

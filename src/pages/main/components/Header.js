@@ -9,6 +9,7 @@ const Hero = styled.header`
   justify-content: space-between;
   width: 100%;
   padding: 2rem;
+  background-color: var(--white);
 
   .camara-photo {
     display: inline-flex;

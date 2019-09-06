@@ -3,7 +3,7 @@ import styled from 'styled-components';
 // Containers
 export const PageContainer = styled.main`
   position: relative;
-  padding: ${props => (props.paddingless ? null : '5rem 0 2rem 0')};
+  padding: ${props => (props.paddingless ? null : '5rem 2rem 2rem 2rem')};
 
   @media screen and (max-width: 768px) {
     padding: ${props => (props.paddingless ? null : '5rem 1rem 2rem 1rem')};
@@ -49,6 +49,17 @@ export const Content = styled.div`
 
   p:not(:first-of-type) {
     margin-top: 1rem;
+  }
+
+  ul {
+    list-style: disc outside;
+    margin-left: 2rem;
+    margin-top: 1rem;
+  }
+
+  a {
+    background-color: var(--primary);
+    color: var(--white);
   }
 
   @media screen and (max-width: 768px) {

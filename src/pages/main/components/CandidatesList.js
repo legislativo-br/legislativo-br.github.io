@@ -96,7 +96,7 @@ export default class CandidatesList extends Component {
       <Section>
         <Content center>
           <Container>
-            <h2> Conheça os deputados eleitos nominalmente </h2>
+            <h2> Quem teve mais votos que o Quociente Eleitoral </h2>
 
             <CandidatesFilter
               order={this.state.order}
