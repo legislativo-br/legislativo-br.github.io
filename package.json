@@ -16,7 +16,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "push:release": "push-dir --dir=build --branch=gh-pages",
+    "release": "yarn build ; yarn push:release"
   },
   "eslintConfig": {
     "extends": "react-app"
