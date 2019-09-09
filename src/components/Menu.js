@@ -130,7 +130,7 @@ const Menu = props => {
         <a
           target="blank"
           className="external-link"
-          href="https://github.com/legislative-votes-br"
+          href="https://github.com/legislativo-br"
           title="Visite o repositório do projeto"
         >
           <i className="fab fa-github-square"></i>
