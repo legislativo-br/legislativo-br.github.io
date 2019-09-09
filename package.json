@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "push:release": "push-dir --dir=build --branch=gh-pages",
+    "push:release": "push-dir --dir=build --branch=master",
     "release": "yarn build ; yarn push:release"
   },
   "eslintConfig": {
