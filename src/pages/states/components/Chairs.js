@@ -18,7 +18,10 @@ const Container = styled.div`
   }
 
   .icon {
-    margin-right: 0.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
   }
 `;
 
@@ -37,6 +40,8 @@ const Chairs = props => {
 
   return (
     <Container>
+      {Data('fas fa-user-tie', `Votos: ${formatNumber(quotient)} votos`)}
+
       {Data('fas fa-vote-yea', `QE: ${formatNumber(quotient)} votos`)}
 
       {Data('fas fa-chair', `${chars} cadeiras`)}

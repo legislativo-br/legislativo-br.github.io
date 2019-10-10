@@ -20,7 +20,9 @@ const StatesPage = () => {
               O objetivo desta visualização é mostrar, por Estado, a quantidade
               de deputados que foram eleitos com votos acima do Quociente
               Eleitoral (QE) em comparação com a quantidade de cadeiras
-              disponíveis no pleito.
+              disponíveis no pleito. Tal quantidade estará demarcada com uma{' '}
+              <span className="text-accent">cor</span> diferente nos cards
+              abaixo.
             </p>
           </Content>
           <br />
