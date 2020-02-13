@@ -7,26 +7,32 @@
     </nuxt-link>
 
     <ul class="links">
-      <nuxt-link
-        class="link-item"
-        to="/states"
-        title="Confira a página com os resultados por Estado"
-      >
-        Estados
-      </nuxt-link>
+      <li>
+        <nuxt-link
+          class="link-item"
+          to="/states"
+          title="Confira a página com os resultados por Estado"
+        >
+          Estados
+        </nuxt-link>
+      </li>
 
-      <nuxt-link class="link-item" to="/about" title="Conheça o projeto">
-        Sobre
-      </nuxt-link>
+      <li>
+        <nuxt-link class="link-item" to="/about" title="Conheça o projeto">
+          Sobre
+        </nuxt-link>
+      </li>
 
-      <a
-        target="blank"
-        class="external-link"
-        href="https://github.com/legislativo-br"
-        title="Visite o repositório do projeto"
-      >
-        <i class="fab fa-github-square"></i>
-      </a>
+      <li>
+        <a
+          target="blank"
+          class="external-link"
+          href="https://github.com/legislativo-br"
+          title="Visite o repositório do projeto"
+        >
+          <i class="fab fa-github-square"></i>
+        </a>
+      </li>
     </ul>
   </nav>
 </template>
@@ -67,6 +73,10 @@ export default {
     justify-content: space-between;
     align-items: center;
     font-size: 1.3rem;
+
+    li {
+      list-style: none;
+    }
 
     .link-item {
       position: relative;
