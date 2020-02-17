@@ -3,26 +3,41 @@
     <div>
       <h2>Quem teve mais votos que o Quociente Eleitoral</h2>
 
-      <!-- filter -->
+      <CCandidatesFilter
+        @select-state="onSelectState"
+        @select-party="onSelectParty"
+        @filter-name="onFilterByName"
+      />
 
-      <div class="candidates-list">
+      <div v-if="hasCandidates" class="candidates-list">
         <CCandidateCard
           v-for="(candidate, key) in candidates"
           :key="key"
           :candidate="candidate"
         />
       </div>
+
+      <div v-else>
+        <br />
+        <p>
+          Não candidatos com votos maiores que o Quociente Eleitoral dado o
+          filtro acima
+        </p>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
-import { orderBy } from 'lodash'
+import orderBy from 'lodash/orderBy'
+import filter from 'lodash/filter'
 import CCandidateCard from './CCandidateCard'
+import CCandidatesFilter from './CCandidatesFilter'
 
 export default {
   name: 'CCandidatesList',
   components: {
+    CCandidatesFilter,
     CCandidateCard
   },
   props: {
@@ -32,12 +47,58 @@ export default {
     }
   },
   data: () => ({
-    orderColumn: 'votes',
-    order: 'desc'
+    state: '',
+    party: '',
+    name: ''
   }),
   computed: {
     candidates() {
-      return orderBy(this.candidatesData, [this.orderColumn], [this.order])
+      const data = orderBy(this.candidatesData, ['votes'], ['desc'])
+
+      if (this.filtersData) {
+        return this.processByName(filter(data, this.filtersData))
+      }
+
+      return this.processByName(data)
+    },
+    filtersData() {
+      const opts = {}
+
+      if (this.state) {
+        opts.state_sigla = this.state
+      }
+
+      if (this.party) {
+        opts.sigla_party = this.party
+      }
+
+      return opts
+    },
+    hasCandidates() {
+      return this.candidates.length > 0
+    }
+  },
+  methods: {
+    onSelectState(state) {
+      this.state = state
+    },
+    onSelectParty(party) {
+      this.party = party
+    },
+    onFilterByName(name) {
+      this.name = name
+    },
+    processByName(data) {
+      if (this.name) {
+        return data.filter((item) => {
+          const name = item.name.toLowerCase()
+          const substr = this.name.toLowerCase()
+
+          return name.includes(substr)
+        })
+      }
+
+      return data
     }
   }
 }
