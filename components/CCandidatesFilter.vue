@@ -2,24 +2,24 @@
   <div class="candidates-filter">
     <CInput
       :value="name"
-      @input="onInputName"
       label="Digite um nome de um deputado"
       name="deputado"
+      @input="onInputName"
     />
     <CSelect
       :value="state"
       :options="stateOptions"
-      @input="onSelectState"
       label="Selecione um estado"
       name="state"
+      @input="onSelectState"
     />
 
     <CSelect
       :value="party"
       :options="partyOptions"
-      @input="onSelectParty"
       label="Selecione um partido"
       name="party"
+      @input="onSelectParty"
     />
   </div>
 </template>
