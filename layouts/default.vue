@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div style="display: flex; flex-direction: column; min-height: 100vh;">
     <CNav />
-    <nuxt />
+    <div style="flex: 1;">
+      <nuxt />
+    </div>
 
     <footer>
       <CContributors />
