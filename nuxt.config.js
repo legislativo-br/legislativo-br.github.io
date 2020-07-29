@@ -1,6 +1,7 @@
 const siteConfig = {
   name: 'Como meu deputado foi eleito?',
-  description: 'Conheça quem foram os Deputados Federais eleitos com votação acima do coeficiente eleitoral de seu Estado. E entenda, também, como funcionam as eleições para Deputado Federal no Brasil',
+  description:
+    'Conheça quem foram os Deputados Federais eleitos com votação acima do coeficiente eleitoral de seu Estado. E entenda, também, como funcionam as eleições para Deputado Federal no Brasil',
   url: 'https://legislativo-br.github.io',
   banner: 'https://legislativo-br.github.io/banner.jpg'
 }

@@ -69,7 +69,7 @@ export default {
       this.party = party
       this.$emit('select-party', party)
     },
-    onInputName: debounce(function(name) {
+    onInputName: debounce(function (name) {
       this.name = name
       this.$emit('filter-name', name)
     }, 1000)
